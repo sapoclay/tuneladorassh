@@ -58,6 +58,8 @@ En el modo interactivo puedes escribir `ayuda`, `help` o `?` en cualquier paso. 
 
 Para ver una guía rápida en modo manual:
 
+<img width="680" height="228" alt="tuneladorassh" src="https://github.com/user-attachments/assets/86e63b21-7ce3-4fab-b911-d98b81ca0133" />
+
 ```
 python3 main.py ayuda
 ```
