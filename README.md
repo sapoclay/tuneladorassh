@@ -63,6 +63,9 @@ python3 main.py socks 192.168.1.10 -D 1080
 
 ## Opciones comunes
 
+- `-L`, `--forward`: reenvío local en formato `[bind_address:]local_port:dest_host:dest_port` (solo modo `local`)
+- `-R`, `--forward`: reenvío remoto en formato `[bind_address:]remote_port:dest_host:dest_port` (solo modo `remoto`)
+- `-D`, `--forward`: puerto SOCKS en formato `[bind_address:]socks_port` (solo modo `socks`)
 - `-u`, `--user`: usuario SSH
 - `-p`, `--port`: puerto SSH
 - `-i`, `--identity`: ruta a clave privada
@@ -71,6 +74,24 @@ python3 main.py socks 192.168.1.10 -D 1080
 - `--ssh-arg`: argumentos extra para `ssh` (repetible)
 - `-f`, `--background`: ejecuta en segundo plano
 - `-c`, `--command`: comando remoto (si se usa, no se añade `-N`)
+
+### Ejemplos con opciones comunes
+
+```
+python3 main.py local 192.168.1.10 -L 8080:127.0.0.1:80 -u ubuntu -p 22
+python3 main.py remoto 192.168.1.10 -R 9090:127.0.0.1:22 -u root -i ~/.ssh/id_rsa
+python3 main.py socks 192.168.1.10 -D 1080 --keepalive 20 --no-pty
+python3 main.py local 192.168.1.10 -L 8080:127.0.0.1:80 --ssh-arg -v --ssh-arg -o --ssh-arg StrictHostKeyChecking=no
+```
+
+### ¿Se pueden combinar?
+
+Sí. Todas las opciones comunes (`-u`, `-p`, `-i`, `--keepalive`, `--no-pty`, `--ssh-arg`, `-f`, `-c`) se pueden combinar con el modo elegido.
+La única restricción es que el tipo de reenvío debe coincidir con el modo:
+
+- Modo `local` requiere `-L`
+- Modo `remoto` requiere `-R`
+- Modo `socks` requiere `-D`
 
 ## Persistencia de configuración
 
