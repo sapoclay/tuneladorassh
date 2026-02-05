@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 """Gestor simple de túneles SSH.
-
-Soporta:
-  - Reenvío local (L)
-  - Reenvío remoto (R)
-  - SOCKS dinámico (D)
-
-Requisitos:
+Resquisitos:
   - Paquete OpenSSH Client instalado (comando ssh disponible)
 """
 
