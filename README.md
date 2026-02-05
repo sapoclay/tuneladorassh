@@ -1,6 +1,6 @@
 # TuneladoraSSH
 
-Herramienta en Python para crear túneles SSH (local, remoto y SOCKS) entre equipos Debian, Ubuntu o Kali para tus cosas ...
+Herramienta en Python para crear túneles SSH (local, remoto y SOCKS) entre equipos Debian, Ubuntu o Kali ... para tus cosas ...
 
 ## Requisitos
 
