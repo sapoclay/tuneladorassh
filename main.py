@@ -61,7 +61,7 @@ def _cargar_config() -> Dict[str, Any]:
 
 
 def _guardar_config(datos: Dict[str, Any]) -> None:
-	# Guarda configuración persistente en disco
+	# Guarda configuración persistente en disco ~/.config/tunelssh/config.json
 	ruta = _obtener_ruta_config()
 	os.makedirs(os.path.dirname(ruta), exist_ok=True)
 	with open(ruta, "w", encoding="utf-8") as archivo:

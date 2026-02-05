@@ -61,7 +61,7 @@ def install_requirements():
     pip_exe = get_pip_executable()
 
     if not os.path.exists(REQUIREMENTS_FILE):
-        print(f"⚠️  {REQUIREMENTS_FILE} no encontrado, continuando sin dependencias extras...")
+        print(f"✅  {REQUIREMENTS_FILE} no encontrado, continuando sin dependencias extras...")
         return
 
     # Evitar reinstalaciones innecesarias si requirements.txt no cambió
@@ -87,7 +87,7 @@ def run_main_app(args=None):
         print(f"❌ Error: {MAIN_FILE} no encontrado")
         sys.exit(1)
 	
-    print(f"🚀 Iniciando TuneladoraSSH...\n")
+    print(f"✅ Iniciando TuneladoraSSH...\n")
     print("─" * 70)
     args = args or []
     subprocess.run([python_exe, MAIN_FILE, *args], check=True)
@@ -115,7 +115,7 @@ def main():
         if is_venv_exists():
             print(f"✅ Entorno virtual encontrado: {VENV_DIR}")
         else:
-            print(f"⚠️  Entorno virtual no encontrado")
+            print(f"✅  Entorno virtual no encontrado")
             create_venv()
         
         # Paso 2: Instalar dependencias
