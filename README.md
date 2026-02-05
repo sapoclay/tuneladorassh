@@ -1,6 +1,6 @@
 # TuneladoraSSH
 
-<img width="680" height="228" alt="tuneladorassh" src="https://github.com/user-attachments/assets/f380d913-c3fc-4c89-88d9-d7969e1152e1" />
+<img width="659" height="331" alt="tuneladorassh" src="https://github.com/user-attachments/assets/e335f33f-fb89-40cb-80e7-d24803ab3a78" />
 
 Herramienta en Python para crear túneles SSH (local, remoto y SOCKS) entre equipos Debian, Ubuntu o Kali ... para tus cosas ...
 
@@ -58,7 +58,7 @@ En el modo interactivo puedes escribir `ayuda`, `help` o `?` en cualquier paso. 
 
 Para ver una guía rápida en modo manual:
 
-<img width="680" height="228" alt="tuneladorassh" src="https://github.com/user-attachments/assets/86e63b21-7ce3-4fab-b911-d98b81ca0133" />
+<img width="832" height="423" alt="tuneladorassh-ayuda" src="https://github.com/user-attachments/assets/c5b00d7e-4ef3-4926-9de4-e3f756f24080" />
 
 ```
 python3 main.py ayuda
