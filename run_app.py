@@ -79,17 +79,18 @@ def install_requirements():
     print("   ✅ Dependencias instaladas")
 
 
-def run_main_app():
+def run_main_app(args=None):
     """Ejecuta la aplicación principal después de configurar el entorno virtual"""
     python_exe = get_python_executable()
-    
+	
     if not os.path.exists(MAIN_FILE):
         print(f"❌ Error: {MAIN_FILE} no encontrado")
         sys.exit(1)
-    
+	
     print(f"🚀 Iniciando TuneladoraSSH...\n")
     print("─" * 70)
-    subprocess.run([python_exe, MAIN_FILE], check=True)
+    args = args or []
+    subprocess.run([python_exe, MAIN_FILE, *args], check=True)
 
 
 def print_banner():
@@ -120,8 +121,8 @@ def main():
         # Paso 2: Instalar dependencias
         install_requirements()
         
-        # Paso 3: Ejecutar aplicación
-        run_main_app()
+        # Paso 3: Ejecutar aplicación (reenviando argumentos)
+        run_main_app(sys.argv[1:])
         
     except KeyboardInterrupt:
         print("\n✅ TuneladoraSSH finalizado por el usuario")

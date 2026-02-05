@@ -19,6 +19,12 @@ sudo apt install -y openssh-client
 Ejecuta el modo interactivo (recomendado):
 
 ```
+python3 run_app.py
+```
+
+o también:
+
+```
 python3 main.py
 ```
 
@@ -28,9 +34,31 @@ También puedes invocarlo explícitamente:
 python3 main.py interactivo
 ```
 
+### Modo manual (no interactivo)
+
+Puedes iniciar el modo manual pasando argumentos al lanzador o directamente a `main.py`.
+
+Con el lanzador:
+
+```
+python3 run_app.py local 192.168.1.10 -L 8080:127.0.0.1:80
+```
+
+Sin el lanzador:
+
+```
+python3 main.py local 192.168.1.10 -L 8080:127.0.0.1:80
+```
+
 ### Ayuda en la terminal
 
 En el modo interactivo puedes escribir `ayuda`, `help` o `?` en cualquier paso. El programa mostrará qué debes hacer en ese campo.
+
+Para ver una guía rápida en modo manual:
+
+```
+python3 main.py ayuda
+```
 
 ## Diferencias entre túnel local, remoto y dinámico
 
